@@ -1,0 +1,694 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from radixtouch.in/templates/Worksbot/Worksbot/source/light/forms-advanced-form.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Feb 2021 10:38:02 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Eyekup-Placement Management Software</title>
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="{% static 'assets/css/app.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bundles/bootstrap-daterangepicker/daterangepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bundles/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bundles/select2/dist/css/select2.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bundles/jquery-selectric/selectric.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bundles/bootstrap-timepicker/css/bootstrap-timepicker.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.css' %}">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/components.css' %}">
+  <!-- Custom style CSS -->
+  
+  <link rel='shortcut icon' type='image/x-icon' href="{% static 'assets/img/logo.png' %}"/>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <div class="loader"></div>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg collapse-btn"><i
+                  class="fas fa-bars"></i></a></li>
+            <li>
+            <div class="search-group">
+              <span class="nav-link nav-link-lg" id="search">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+              <input type="text" class="search-control" placeholder="search" aria-label="search" aria-describedby="search">
+            </div>
+            </li>
+          </ul>
+        </div>
+        <ul class="navbar-nav navbar-right">
+        <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                <i class="fas fa-expand"></i>
+              </a>
+            </li>
+            
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+              class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Notifications
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <span class="dropdown-item-icon bg-primary text-white">
+                    <i class="fas fa-shopping-cart"></i>
+                  </span>
+                  <span class="dropdown-item-desc">
+                    New Order
+                    <span class="time">3 Hours Ago</span>
+                  </span>
+                </a>
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <span class="dropdown-item-icon bg-info text-white">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  </span>
+                  <span class="dropdown-item-desc">
+                    Application Error
+                    <span class="time">7 Hours Ago</span>
+                  </span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <span class="dropdown-item-icon bg-success text-white">
+                    <i class="fa fa-power-off" aria-hidden="true"></i>
+                  </span>
+                  <span class="dropdown-item-desc">
+                    Server restarted
+                    <span class="time">9 Hours Ago</span>
+                  </span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <span class="dropdown-item-icon bg-danger text-white">
+                    <i class="fa fa-server" aria-hidden="true"></i>
+                  </span>
+                  <span class="dropdown-item-desc">
+                    Your Subscription Expired
+                    <span class="time">10 Hours Ago</span>
+                  </span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <span class="dropdown-item-icon bg-purple text-white">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  </span>
+                  <span class="dropdown-item-desc">
+                    You have <b>4</b> new followers
+                    <span class="time">Yesterday</span>
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+              class="nav-link nav-link-lg"><i class="far fa-envelope"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Messages
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-message">
+                <a href="#" class="dropdown-item">
+                  <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="{% static 'assets/img/users/user-1.png' %}" class="image-square">
+                  </span>
+                  <span class="dropdown-item-desc">
+                    <span class="message-user">Michael Gardner</span>
+                    <span class="time messege-text">Analysis Project and Design Flowchart</span>
+                    <span class="time">2 Min Ago</span>
+                  </span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="{% static 'assets/img/users/user-2.png' %}" class="image-square">
+                  </span>
+                  <span class="dropdown-item-desc">
+                    <span class="message-user">Nancy Burton</span>
+                    <span class="time messege-text">Client meeting is cancelled</span>
+                    <span class="time">5 Hour Ago</span>
+                  </span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="{% static 'assets/img/users/user-5.png' %}" class="image-square">
+                  </span>
+                  <span class="dropdown-item-desc">
+                    <span class="message-user">Amiah Smith</span>
+                    <span class="time messege-text">Project Planning</span>
+                    <span class="time">12 Hour Ago</span>
+                  </span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="{% static 'assets/img/users/user-4.png' %}" class="image-square">
+                  </span>
+                  <span class="dropdown-item-desc">
+                    <span class="message-user">John Doe</span>
+                    <span class="time messege-text">Leave application !!</span>
+                    <span class="time">1 Days Ago</span>
+                  </span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="{% static 'assets/img/users/user-3.png' %}" class="image-square">
+                  </span>
+                  <span class="dropdown-item-desc">
+                    <span class="message-user">Wiltor Stone</span>
+                    <span class="time messege-text">Discussion about increment!</span>
+                    <span class="time">2 Days Ago</span>
+                  </span>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <span class="dropdown-item-avatar text-white">
+                    <img alt="image" src="{% static 'assets/img/users/user-2.png' %}" class="image-square">
+                  </span>
+                  <span class="dropdown-item-desc">
+                    <span class="message-user">Nancy Burton</span>
+                    <span class="time messege-text">Upcoming project meeting</span>
+                    <span class="time text-primary">3 Days Ago</span>
+                  </span>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+              <img alt="image" src="{% static 'assets/img/user.png' %}" class="user-img-radious-style">
+              <span class="d-sm-none d-lg-inline-block"></span></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-title">Hello Admin {{ex1.Username}}</div>
+              <a href="{% url 'profile' %}" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Profile
+              </a>
+              <a href="{% url 'timeline' %}" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Activities
+              </a>
+              <a href="#" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="{% url 'logout' %}" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="{% url 'index' %}">
+              <img alt="image" src="{% static 'assets/img/logo.png' %}" class="header-logo" />
+              <span class="logo-name">EYEKUP</span>
+            </a>
+          </div>
+          <ul class="sidebar-menu">
+           
+            <li><a class="nav-link" href="{% url 'dashboard' %}"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a class="nav-link" href="{% url 'jobcategories' %}"><i class="fas fa-list"></i><span>Job Categories</span></a></li>
+          
+            <li><a class="nav-link" href="{% url 'skills' %}"><i class="far fa-list-alt"></i><span>Skills</span></a></li>
+           
+            <li><a class="nav-link" href="{% url 'companies' %}"><i class="fas fa-layer-group"></i><span>Companies</span></a></li>
+          
+            <li><a class="nav-link" href="{% url 'Joblocations' %}"><i class="fas fa-map-marker-alt"></i><span>Job Locations</span></a></li>
+            
+            <li><a class="nav-link" href="{% url 'jobs' %}"><i class="fas fa-award"></i><span>Jobs</span></a></li>
+           
+            <li><a class="nav-link" href="{% url 'jobapplications' %}"><i class="far fa-user"></i><span>Job Applications</span></a></li>
+        
+            <li><a class="nav-link" href="{% url 'candidatedatabase' %}"><i class="fas fa-database"></i><span>Candidate Database</span></a></li>
+             
+            <li><a class="nav-link" href="{% url 'Jobonboard' %}"><i class="fas fa-user-circle"></i><span>Job Onboard</span></a></li>
+              
+            <li><a class="nav-link" href="{% url 'interviewschedule' %}"><i class="fas fa-calendar"></i><span>Interview Schedule</span></a></li>
+              
+            <!-- <li><a class="nav-link" href="{% url 'blank' %}"><i class="fas fa-users"></i> <span>Team</span></a></li> -->
+             
+            <li><a class="nav-link" href="{% url 'todos' %}"><i class="fas fa-tasks"></i><span>ToDos</span></a></li>
+           
+            <li><a class="nav-link" href="{% url 'report' %}"><i class="fas fa-chart-bar"></i><span>Report</span></a></li>
+              
+            <li><a class="nav-link" href="javascript:void(0)"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+          </ul>
+        </aside>
+      </div>
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Job Applications</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="{% url 'dashboard' %}" class="fas fa-home"></a></div>
+              <div class="breadcrumb-item">Job Applications</div>
+           <div style="text-decoration: white;position: relative;left: 5px;"> <a href="{% url 'createnewjobapplication' %}">Create New</a></div>
+           
+            </div>
+          </div>
+        
+      
+       
+        <div> <a href="#" class="btn btn-icon icon-left bg-green"> <i class="fas fa-list-alt"></i> Filter Results</a>
+            <a href="#" class="btn btn-icon icon-left btn-info"><i class="fas fa-table"></i> Table viewport</a>
+            <a href="#" class="btn btn-icon icon-left bg-orange"> <i class="fas fa-envelope"></i> Mail Settings</a>
+            <a href="#" class="btn btn-icon icon-left bg-red"><i class="fas fa-bookmark"></i> New Status</a>
+        </div>
+           <div><br></div>
+       
+          <div class="section-body">
+            <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                   
+                    <div class="card-header">
+                      <h4>Filter by</h4>
+                    </div>
+                    <div class="card-body">
+                     
+                       <div class="row">
+                          <div style="width: 20%;" class="form-group">
+                          <label>From</label>
+                          <input type="text" class="form-control datepicker">
+                           </div>
+                           <div style="width: 20%;" class="form-group">
+                            <label>To</label>
+                            <input type="text" class="form-control datepicker">
+                             </div>
+                            
+                            <div  style="width: 20%;"  class="form-group">
+                             <label>Jobs</label>
+                              <select class="form-control">
+                                <option>All Jobs</option>
+                                <option>Trainee Engineer</option>
+                                <option>Network Engineer</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="card-footer text-left">
+                            <button class="btn btn-success bg-green">Apply</button> 
+                            <button class="btn btn-success bg-info">Reset</button> 
+                          </div>
+                            
+                          <div class="section-body">
+                            <div class="row">
+                              <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card">
+                                  <div class="card-header">
+                                    <h4>Applied</h4>
+                                  </div>
+                                  <div class="card-body">
+                                    <ul class="list-unstyled user-progress list-unstyled-border list-unstyled-noborder mt-2">
+                                      <li class="media">
+                                        <img alt="image" class="mr-3 image-square" width="50" src="{% static 'assets/img/users/user-1.png' %}">
+                                        <div class="media-body">
+                                          <div class="media-title">Michael Gardner</div>
+                                          <div class="rate">
+                                            <input type="radio" id="star5" name="rate" value="5" />
+                                            <label for="star5" title="text">5 stars</label>
+                                            <input type="radio" id="star4" name="rate" value="4" />
+                                            <label for="star4" title="text">4 stars</label>
+                                            <input type="radio" id="star3" name="rate" value="3" />
+                                            <label for="star3" title="text">3 stars</label>
+                                            <input type="radio" id="star2" name="rate" value="2" />
+                                            <label for="star2" title="text">2 stars</label>
+                                            <input type="radio" id="star1" name="rate" value="1" />
+                                            <label for="star1" title="text">1 star</label>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <div class="text-muted">Manage Revenue Analysis</div>
+                                        </div>
+                                       
+                                          <div class="text-job text-muted">10-12-2019 11:50 PM</div>
+                                       
+                                      </li>
+                                     </ul>
+                                  </div>
+                                </div>
+                               </div>
+                               <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card">
+                                  <div class="card-header">
+                                    <h4>Phone Screen</h4>
+                                  </div>
+                                  <div class="card-body">
+                                    <ul class="list-unstyled user-progress list-unstyled-border list-unstyled-noborder mt-2">
+                                      <li class="media">
+                                        <img alt="image" class="mr-3 image-square" width="50" src="{% static 'assets/img/users/user-3.png' %}">
+                                        <div class="media-body">
+                                          <div class="media-title">Michael Gardner</div>
+                                          <div class="rate">
+                                            <input type="radio" id="star5" name="rate" value="5" />
+                                            <label for="star5" title="text">5 stars</label>
+                                            <input type="radio" id="star4" name="rate" value="4" />
+                                            <label for="star4" title="text">4 stars</label>
+                                            <input type="radio" id="star3" name="rate" value="3" />
+                                            <label for="star3" title="text">3 stars</label>
+                                            <input type="radio" id="star2" name="rate" value="2" />
+                                            <label for="star2" title="text">2 stars</label>
+                                            <input type="radio" id="star1" name="rate" value="1" />
+                                            <label for="star1" title="text">1 star</label>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <div class="text-muted">Manage Revenue Analysis</div>
+                                        </div>
+                                       
+                                          <div class="text-job text-muted">10-12-2019 11:50 PM</div>
+                                        
+                                      </li>
+                                     </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card">
+                                  <div class="card-header">
+                                    <h4>Interview</h4>
+                                  </div>
+                                  <div class="card-body">
+                                    <ul class="list-unstyled user-progress list-unstyled-border list-unstyled-noborder mt-2">
+                                      <li class="media">
+                                        <img alt="image" class="mr-3 image-square" width="50" src="{% static 'assets/img/users/user-5.png' %}">
+                                        <div class="media-body">
+                                          <div class="media-title">Michael Gardner</div>
+                                          <div class="rate">
+                                            <input type="radio" id="star5" name="rate" value="5" />
+                                            <label for="star5" title="text">5 stars</label>
+                                            <input type="radio" id="star4" name="rate" value="4" />
+                                            <label for="star4" title="text">4 stars</label>
+                                            <input type="radio" id="star3" name="rate" value="3" />
+                                            <label for="star3" title="text">3 stars</label>
+                                            <input type="radio" id="star2" name="rate" value="2" />
+                                            <label for="star2" title="text">2 stars</label>
+                                            <input type="radio" id="star1" name="rate" value="1" />
+                                            <label for="star1" title="text">1 star</label>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <div class="text-muted">Manage Revenue Analysis</div>
+                                        </div>
+                                       
+                                          <div class="text-job text-muted">10-12-2019 11:50 PM</div>
+                                       
+                                      </li>
+                                     
+                                     </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card">
+                                  <div class="card-header">
+                                    <h4>Hired</h4>
+                                  </div>
+                                  <div class="card-body">
+                                    <ul class="list-unstyled user-progress list-unstyled-border list-unstyled-noborder mt-2">
+                                      <li class="media">
+                                        <img alt="image" class="mr-3 image-square" width="50" src="{% static 'assets/img/users/user-7.png' %}">
+                                        <div class="media-body">
+                                          <div class="media-title">Michael Gardner</div>
+                                          
+                                          <div class="rate">
+                                            <input type="radio" id="star5" name="rate" value="5" />
+                                            <label for="star5" title="text">5 stars</label>
+                                            <input type="radio" id="star4" name="rate" value="4" />
+                                            <label for="star4" title="text">4 stars</label>
+                                            <input type="radio" id="star3" name="rate" value="3" />
+                                            <label for="star3" title="text">3 stars</label>
+                                            <input type="radio" id="star2" name="rate" value="2" />
+                                            <label for="star2" title="text">2 stars</label>
+                                            <input type="radio" id="star1" name="rate" value="1" />
+                                            <label for="star1" title="text">1 star</label>
+                                          </div>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <div class="text-muted">Manage Revenue Analysis</div>
+                                        </div>
+                                      
+                                          <div class="text-job text-muted">10-12-2019 11:50 PM</div>
+                                      
+                                      </li>
+                                      
+                                     </ul>
+                                  </div>
+                                </div>
+                              </div>
+                             </div>
+                            </div>  
+                            
+                            <div class="settingSidebar">
+			<a href="javascript:void(0)" class="settingPanelToggle"> <i
+				class="fa fa-spin fa-cog"></i>
+			</a>
+			<div class="settingSidebar-body ps-container ps-theme-default">
+				<div class=" fade show active">
+					<div class="setting-panel-header">Theme Customizer</div>
+					<div class="p-15 border-bottom">
+						<h6 class="font-medium m-b-10">Theme Layout</h6>
+						<div class="selectgroup layout-color w-50">
+							<label> <span class="control-label p-r-20">Light</span>
+								<input type="radio" name="custom-switch-input" value="1"
+								class="custom-switch-input" checked> <span
+								class="custom-switch-indicator"></span>
+							</label>
+						</div>
+						<div class="selectgroup layout-color  w-50">
+							<label> <span class="control-label p-r-20">Dark&nbsp;</span>
+								<input type="radio" name="custom-switch-input" value="2"
+								class="custom-switch-input"> <span
+								class="custom-switch-indicator"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="p-15 border-bottom">
+					<h6 class="font-medium m-b-10">Sidebar Colors</h6>
+					<div class="sidebar-setting-options">
+						<ul class="sidebar-color list-unstyled mb-0">
+							<li title="white" class="active">
+								<div class="white"></div>
+							</li>
+							<li title="blue">
+								<div class="blue"></div>
+							</li>
+							<li title="coral">
+								<div class="coral"></div>
+							</li>
+							<li title="purple">
+								<div class="purple"></div>
+							</li>
+							<li title="allports">
+								<div class="allports"></div>
+							</li>
+							<li title="barossa">
+								<div class="barossa"></div>
+							</li>
+							<li title="fancy">
+								<div class="fancy"></div>
+							</li>
+						</ul>
+					</div>
+		
+				</div>
+				<div class="p-15 border-bottom">
+					<h6 class="font-medium m-b-10">Theme Colors</h6>
+					<div class="theme-setting-options">
+						<ul class="choose-theme list-unstyled mb-0">
+							<li title="white" class="active">
+								<div class="white"></div>
+							</li>
+							<li title="blue">
+								<div class="blue"></div>
+							</li>
+							<li title="coral">
+								<div class="coral"></div>
+							</li>
+							<li title="purple">
+								<div class="purple"></div>
+							</li>
+							<li title="allports">
+								<div class="allports"></div>
+							</li>
+							<li title="barossa">
+								<div class="barossa"></div>
+							</li>
+							<li title="fancy">
+								<div class="fancy"></div>
+							</li>
+							<li title="cyan">
+								<div class="cyan"></div>
+							</li>
+							<li title="orange">
+								<div class="orange"></div>
+							</li>
+							<li title="green">
+								<div class="green"></div>
+							</li>
+							<li title="red">
+								<div class="red"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="p-15 border-bottom">
+					<h6 class="font-medium m-b-10">Layout Options</h6>
+					<div class="theme-setting-options">
+						<label> <span class="control-label p-r-20">Compact
+								Sidebar Menu</span> <input type="checkbox"
+							name="custom-switch-checkbox" class="custom-switch-input"
+							id="mini_sidebar_setting"> <span
+							class="custom-switch-indicator"></span>
+						</label>
+					</div>
+				</div>
+				<div class="mt-3 mb-3 align-center">
+					<a href="#"
+						class="btn btn-icon icon-left btn-outline-primary btn-restore-theme">
+						<i class="fas fa-undo"></i> Restore Default
+					</a>
+				</div>
+			</div>
+		</div>
+      </div>
+      <footer class="main-footer">
+        <div style="text-align: center;" class="footer-centre">
+          Copyright &copy; 2021 <div class="bullet"></div> <a href="#">Eyekup</a>
+        </div>
+        <div class="footer-right">
+        </div>
+      </footer>
+    </div>
+  </div> 
+
+
+<style>
+  div.stars {
+  width: 170px;
+  display: inline-block;
+}
+
+input.star { display: none; }
+
+label.star {
+  float:right;
+  padding:10px;
+  font-size: 15px;
+  color: #444;
+  transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { color: #F62; }
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
+</style>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    width: 160px;
+    float: left;
+    height: 36px;
+    padding:5px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+
+</style>
+
+
+  
+  <!-- General JS Scripts -->
+  <script src="{% static 'assets/js/app.min.js' %}"></script>
+  <!-- JS Libraies -->
+  <script src="{% static 'assets/bundles/cleave-js/dist/cleave.min.js' %}"></script>
+  <script src="{% static 'assets/bundles/cleave-js/dist/addons/cleave-phone.us.js' %}"></script>
+  <script src="{% static 'assets/bundles/jquery-pwstrength/jquery.pwstrength.min.js' %}"></script>
+  <script src="{% static 'assets/bundles/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+  <script src="{% static 'assets/bundles/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js' %}"></script>
+  <script src="{% static 'assets/bundles/bootstrap-timepicker/js/bootstrap-timepicker.min.js' %}"></script>
+  <script src="{% static 'assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js' %}"></script>
+  <script src="{% static 'assets/bundles/select2/dist/js/select2.full.min.js' %}"></script>
+  <script src="{% static 'assets/bundles/jquery-selectric/jquery.selectric.min.js' %}"></script>
+  <!-- Page Specific JS File -->
+  <script src="{% static 'assets/js/page/forms-advanced-forms.js' %}"></script>
+  <!-- Template JS File -->
+  <script src="{% static 'assets/js/scripts.js' %}"></script>
+  
+</body>
+
+
+<!-- Mirrored from radixtouch.in/templates/Worksbot/Worksbot/source/light/forms-advanced-form.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Feb 2021 10:38:21 GMT -->
+</html>
+  
+
